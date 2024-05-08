@@ -17,6 +17,8 @@ function getMealCost(orders){
 }
 let mealCostSubtotal = getMealCost(mylunch);
 let tax = mealCostSubtotal * .08;
-let tip = (mealCostSubtotal + tax) * .18;
+let tip = mealCostSubtotal  * .18;
 let totalDue = mealCostSubtotal + tax + tip;
 console.log("The total due is " + totalDue.toFixed(2));
+console.log("The tax amount: " + tax.toFixed(2));
+console.log("The tip amount: " + tip.toFixed(2));
