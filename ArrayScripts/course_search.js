@@ -41,29 +41,30 @@ let courses = [
 
    
    function getStartDate(courses, lookCourseId){
-    let matching = [];
+    
 
     for(let i= 0; i < courses.length; i++){
         if (courses[i].CourseId == lookCourseId){
-            matching.push(courses[i].StartDate);
+            return courses[i].StartDate;
         }
     }
-    return matching;
+    
    }
 
-   console.log("The start date for PROG200 " + getStartDate(courses,"PROG200"));
+   let PROG200Course = getStartDate(courses,"PROG200");
+   console.log("The start date for PROG200 " + PROG200Course);
+
 
    function getTitle(courses, lookCourseId){
-    let matching = [];
 
     for(let i= 0; i < courses.length; i++){
         if (courses[i].CourseId == lookCourseId){
-            matching.push(courses[i].Title);
+            return courses[i].Title;
         }
     }
-    return matching;
    }
-   console.log("The title of the PROJ500 course is " + getTitle(courses,"PROJ500"));
+    let PROJ500Course = getTitle(courses,"PROJ500")
+   console.log("The title of the PROJ500 course is " + PROJ500Course);
 
 
    function getTitlesCost(courses, lookCostFee){
@@ -96,4 +97,3 @@ let courses = [
    
 
 
-  

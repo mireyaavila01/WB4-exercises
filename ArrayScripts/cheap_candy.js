@@ -28,30 +28,23 @@ let candys = [
   
    
 
-    function getCandyMM(candys, lookCandy){
+    //calculation to get products that include M&M
         let matching = [];
-        let specificName = lookCandy;
         for(let i = 0; i < candys.length; i++){
-            if(candys[i].product == specificName){
-                matching.push(candys[i].product.length);
+            if(candys[i].product.indexOf("M&M") >= 0 ){
+                matching.push(candys[i].product);
             }
-
+           
         }
-        return matching;
-    }
-    console.log(getCandyMM(candys,"M&Ms"));
+        console.log("the products that include 'M&M' are " + matching);
     
     
-    function getSpecificName(candys, lookName){
-        let matching = []
-        let name = lookName;
+    //calculation to see if we carry the product 
+        let yesOrNo = "no"; 
         for(let i = 0; i < candys.length; i++){
-            if (candys[i].product == name){
-               matching.push(candys[i].product); 
+            if (candys[i].product == "Swedish Fish"){
+              yesOrNo = "yes" ;
             }
-            
         }
-        return matching; 
-    }
-
-    console.log(getSpecificName(candys, "Swedish Fish"));
+   
+    console.log("Do we carry Swedish Fish ? " + yesOrNo);
