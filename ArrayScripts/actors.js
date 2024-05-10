@@ -54,14 +54,14 @@ let academyMembers = [
    console.log("The ones that been in at least 3 films are " + getFilmLength(academyMembers, 3));
 
    //calculation for who has a name that start with "Bob"
-   function getName(academyMembers, lookname){
+   function getName(academyMembers){
     let matching =[];
-    let memberName = lookname;
+
     for(let i = 0; i < academyMembers.length; i++){
-        if(academyMembers[i].name == academyMembers.name.indexOf(memberName)){
+        if(academyMembers[i].name.substring(0,3) == "Bob"){
             matching.push(academyMembers[i].name);
         }
     }
     return matching;
    }
-   console.log(getMember(academyMembers, "Bob"));
+   console.log("start with 'Bob': " + (getName(academyMembers)));
